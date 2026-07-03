@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>黄邦波 · 简历</title>
+<style>
+  :root{
+    --brand:#E60012;
+    --bg:#FFFFFF;
+    --muted:#F2F2F2;
+    --border-strong:#464646;
+    --border:#D9D9D9;
+    --text:#000000;
+    --text-muted:#5A5A5A;
+    --font:"Microsoft YaHei","微软雅黑","PingFang SC",sans-serif;
+    --mono:"SFMono-Regular",Consolas,"Courier New",monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{background:var(--muted);}
+  body{
+    font-family:var(--font);
+    color:var(--text);
+    line-height:1.6;
+    font-size:13.5px;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+  .page{
+    width:210mm;
+    min-height:297mm;
+    margin:14px auto;
+    background:var(--bg);
+    border:1px solid var(--border);
+    padding:16mm 15mm 14mm;
+  }
+
+  /* ===== Header ===== */
+  header{
+    display:flex;
+    justify-content:space-between;
+    align-items:stretch;
+    border-bottom:2px solid var(--brand);
+    padding-bottom:14px;
+  }
+  .head-left{flex:1;padding-right:18px;}
+  .name-row{display:flex;align-items:baseline;gap:12px;}
+  .name{font-size:30px;font-weight:700;letter-spacing:4px;}
+  .name-en{font-family:var(--mono);font-size:12px;color:var(--text-muted);letter-spacing:1px;}
+  .target{
+    display:inline-block;
+    margin-top:8px;
+    border-left:4px solid var(--brand);
+    padding:2px 10px;
+    font-size:14px;
+    font-weight:700;
+    background:var(--muted);
+  }
+  .subline{margin-top:8px;color:var(--text-muted);font-size:12.5px;}
+  .contacts{margin-top:8px;font-size:12.5px;display:flex;flex-wrap:wrap;gap:6px 16px;}
+  .contacts span{display:inline-flex;align-items:center;gap:5px;}
+  .contacts .k{font-family:var(--mono);color:var(--brand);font-weight:700;}
+  .photo{
+    width:104px;height:132px;flex:none;
+    border:1.5px solid var(--brand);
+    object-fit:cover;object-position:center top;
+    background:var(--muted);
+  }
+
+  /* ===== Section ===== */
+  section{margin-top:16px;}
+  .sec-title{
+    display:flex;align-items:center;gap:10px;
+    border-bottom:1px solid var(--border-strong);
+    padding-bottom:5px;margin-bottom:10px;
+  }
+  .sec-no{
+    font-family:var(--mono);font-size:12px;font-weight:700;
+    color:var(--bg);background:var(--brand);
+    padding:1px 7px;letter-spacing:1px;
+  }
+  .sec-name{font-size:15px;font-weight:700;letter-spacing:2px;}
+  .sec-tag{margin-left:auto;font-family:var(--mono);font-size:10.5px;color:var(--text-muted);letter-spacing:1px;text-transform:uppercase;}
+
+  /* ===== Summary ===== */
+  .summary li{list-style:none;position:relative;padding-left:16px;margin-bottom:5px;color:#111;}
+  .summary li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;background:var(--brand);}
+  .summary b{font-weight:700;}
+
+  /* ===== Match table ===== */
+  table.match{width:100%;border-collapse:collapse;}
+  table.match td{border:1px solid var(--border);padding:6px 9px;vertical-align:top;font-size:12.5px;}
+  table.match tr td:first-child{
+    width:38%;background:var(--muted);font-weight:700;
+    border-left:3px solid var(--brand);
+  }
+
+  /* ===== Experience ===== */
+  .job{
+    border-left:3px solid var(--brand);
+    background:var(--muted);
+    padding:9px 12px;
+    margin-bottom:11px;
+  }
+  .job-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:4px;}
+  .job-org{font-size:14.5px;font-weight:700;}
+  .job-role{color:var(--text-muted);font-weight:400;font-size:13px;}
+  .job-date{font-family:var(--mono);font-size:11.5px;color:var(--brand);font-weight:700;white-space:nowrap;}
+  .job-dir{
+    font-size:12px;color:var(--text-muted);margin:3px 0 6px;
+    padding-bottom:5px;border-bottom:1px dashed var(--border);
+  }
+  .job ul{margin:0;padding-left:0;}
+  .job li{list-style:none;position:relative;padding-left:14px;margin-bottom:4px;font-size:12.5px;}
+  .job li::before{content:"▸";position:absolute;left:0;color:var(--brand);font-size:11px;top:1px;}
+  .job li ul{margin-top:3px;padding-left:4px;}
+  .job li li{padding-left:14px;}
+  .job li li::before{content:"·";color:var(--border-strong);font-weight:700;}
+  b.hl{font-weight:700;}
+
+  /* ===== Projects ===== */
+  .proj{border:1px solid var(--border);border-top:2px solid var(--brand);padding:8px 11px;margin-bottom:9px;}
+  .proj-name{font-weight:700;font-size:13px;}
+  .proj-desc{color:var(--text-muted);font-size:12px;margin:3px 0 5px;}
+  .kw{display:flex;flex-wrap:wrap;gap:5px;}
+  .kw span{font-family:var(--mono);font-size:10.5px;border:1px solid var(--border);padding:1px 6px;color:#222;background:var(--muted);}
+
+  /* ===== Grid bottom ===== */
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  table.plain{width:100%;border-collapse:collapse;}
+  table.plain td{border:1px solid var(--border);padding:5px 8px;font-size:12.5px;}
+  table.plain tr td:first-child{background:var(--muted);font-family:var(--mono);font-size:11px;color:var(--text-muted);white-space:nowrap;}
+  .honor li{list-style:none;position:relative;padding-left:15px;margin-bottom:5px;font-size:12.5px;}
+  .honor li::before{content:"★";position:absolute;left:0;color:var(--brand);font-size:11px;}
+  .stack{font-size:12.5px;color:#111;line-height:1.9;}
+  .stack .chip{display:inline-block;border:1px solid var(--border);border-left:3px solid var(--brand);background:var(--muted);padding:1px 7px;margin:0 4px 5px 0;font-size:11.5px;}
+
+  @media print{
+    html,body{background:#fff;}
+    .page{margin:0;border:none;width:auto;min-height:auto;padding:12mm 12mm;}
+    section,.job,.proj{break-inside:avoid;}
+  }
+  @page{size:A4;margin:0;}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="head-left">
+      <div class="name-row">
+        <div class="name">黄邦波</div>
+        <div class="name-en">HUANG BANGBO</div>
+      </div>
+      <div class="target">AI 算法及交互中心负责人 · 大模型记忆与智能体交互方向</div>
+      <div class="subline">北京大学 · 人工智能硕士　|　8 年 AI 研发与团队管理经验</div>
+      <div class="contacts">
+        <span><span class="k">TEL</span> 18129849303</span>
+        <span><span class="k">MAIL</span> 734321887@qq.com</span>
+        <span><span class="k">EDU</span> 1601210556@pku.edu.cn</span>
+      </div>
+    </div>
+    <img class="photo" src="359f12d67254c3f63afd8406e0e2d6c0.jpg" alt="黄邦波">
+  </header>
+
+  <section>
+    <div class="sec-title"><span class="sec-no">01</span><span class="sec-name">个人简介</span><span class="sec-tag">Profile</span></div>
+    <ul class="summary">
+      <li>北京大学人工智能硕士,长期从事大模型应用、Agent 架构与对话交互系统研发,近三年重点投入 <b>智能体记忆机制、上下文管理与对话一致性</b> 方向。</li>
+      <li>在遥望科技主导组织级 Agent 平台,负责 <b>短期缓存 + 长期记忆协同</b> 的记忆系统与多角色人格画像机制,解决长周期、跨会话交互的上下文连贯与人设稳定问题。</li>
+      <li>在道通科技主导自研 <b>分层记忆库 + 经验蒸馏 + 评测闭环</b>(SkillRL),把成功经验/失败教训结构化为可召回、可复用的记忆单元,并搭建确定性评测框架量化效果。</li>
+      <li>具备 50 人规模算法与产研团队管理经验;有具身智能 / 物理智能体(Physical Agent)一线研发背景。</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-title"><span class="sec-no">02</span><span class="sec-name">与目标岗位能力匹配</span><span class="sec-tag">Job Fit</span></div>
+    <table class="match">
+      <tr><td>长序记忆:分层存储 / 压缩召回 / 遗忘 / 反思更新</td><td>遥望 Agent 平台记忆系统 + 道通 SkillRL 分层技能库、经验蒸馏、失败教训反思</td></tr>
+      <tr><td>上下文管理与上下文窗口优化</td><td>Plan 引擎上下文调度、端侧长上下文压缩与内化预研</td></tr>
+      <tr><td>人格一致性与人设表达</td><td>多角色 Agent 画像 + 个性化记忆隔离,保障跨会话人设稳定</td></tr>
+      <tr><td>对话交互链路</td><td>明日联合多轮对话流程引擎、引导式对话算法重构</td></tr>
+      <tr><td>记忆效果评估体系</td><td>自研 ClawEval 确定性评测框架(召回、AB 对比、回归)</td></tr>
+      <tr><td>检索增强 / 向量库 / 时序建模</td><td>RAG 冷启动、语义检索匹配、技能时序索引与分层检索</td></tr>
+      <tr><td>团队管理与人才梯队</td><td>50 人团队管理,打通北大 / 清华校招,建立算法人才储备池</td></tr>
+      <tr><td>加分:具身智能 / 智能体交互</td><td>道通 Digital Agent × Physical Agent 打通、机械臂交互闭环</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <div class="sec-title"><span class="sec-no">03</span><span class="sec-name">工作经历</span><span class="sec-tag">Experience</span></div>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="job-org">道通科技 <span class="job-role">/ 技术 VP(Digital Agent 团队)</span></div>
+        <div class="job-date">2026.01 – 2026.04</div>
+      </div>
+      <div class="job-dir">方向:智能体记忆 / 技能沉淀与数字-物理交互</div>
+      <ul>
+        <li>主导自研 Agent 自进化框架 <b class="hl">SkillRL</b>,把历史交互轨迹沉淀为可复用的记忆 / 技能:
+          <ul>
+            <li><b class="hl">分层记忆库</b>:按"通用 + 场景特定"分层存储,结合语义检索按需召回,减少上下文冗余;</li>
+            <li><b class="hl">经验蒸馏(压缩)</b>:成功轨迹提取策略、失败轨迹反事实分析生成"教训",轨迹 token 占用可下降一个量级;</li>
+            <li><b class="hl">反思与更新</b>:未通过评测的记忆回流继续优化,形成"生成—评测—回流"闭环;</li>
+            <li><b class="hl">评测体系 ClawEval</b>:沙箱内确定性打分与 AB 对比(非 LLM-as-judge),效果可复现。</li>
+          </ul>
+        </li>
+        <li>牵头巡检行业多智能体系统落地规划,打通数字智能体与无人机 / 机械臂的感知—决策—执行闭环;机械臂抓取任务引入技能记忆后成功率约 60% → 85%。</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="job-org">遥望科技(A 股上市) <span class="job-role">/ 产研总监</span></div>
+        <div class="job-date">2025.07 – 2026.01</div>
+      </div>
+      <div class="job-dir">方向:Agent 平台 · 记忆系统与上下文管理</div>
+      <ul>
+        <li><b class="hl">记忆系统</b>:为每个 Agent 设计短期缓存与长期记忆协同的双层结构,构建角色专属知识库,通过"元知识库"做全局与个体知识的优先级调度。</li>
+        <li><b class="hl">人格一致性</b>:支持自定义角色画像(领域 / 目标 / 权限),记忆按角色隔离,保障多轮、跨会话下的人设稳定。</li>
+        <li><b class="hl">上下文与规划</b>:智能 Plan 引擎负责复杂任务拆解与上下文组织,优化检索 / 缓存策略,复杂任务上下文调度耗时从数十秒级压至毫秒级。</li>
+        <li>打通云盘、知识库、数据库联动,支撑跨会话记忆复用;统筹产研、业务、客户端多团队协同。</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="job-org">广东明日联合 <span class="job-role">/ 高级 AI 技术总监</span></div>
+        <div class="job-date">2025.04 – 2025.07</div>
+      </div>
+      <div class="job-dir">方向:对话交互链路 · 医疗场景</div>
+      <ul>
+        <li>重构低算力场景引导式对话算法,优化多轮提问逻辑,单轮对话用户平均可澄清症状信息从 3 项提升至约 12 项,支持多症状、模糊语义与中英双语。</li>
+        <li>搭建覆盖 12 种常见疾病的多轮对话流程引擎,对话逻辑可配置;边缘设备做压缩与量化,科室推荐准确率约 65% → 90%。</li>
+        <li>搭建低代码开发平台与 AI 工具链,支撑多项目并行交付;打通北大、清华校招,建立算法人才储备池。</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="job-org">摩尔线程 <span class="job-role">/ AI 战略经理</span></div>
+        <div class="job-date">2025.01 – 2025.04</div>
+      </div>
+      <div class="job-dir">方向:大模型端侧部署 · 数字人交互</div>
+      <ul>
+        <li>参与数字人软硬件一体化项目,基于自研 GPU 整合语音与数字人模型,做端侧渲染与推理优化,交互延迟控制在 2 秒内。</li>
+        <li>规划算力本产品方向,推动 Qwen、DeepSeek 等大模型端侧部署与 AICoding 场景落地。</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="job-org">某军工单位 <span class="job-role">/ 领军项目负责人</span></div>
+        <div class="job-date">2020 – 2024</div>
+      </div>
+      <div class="job-dir">方向:多智能体系统 · 目标识别与决策</div>
+      <ul>
+        <li>负责反无人机多智能体防御项目,融合目标检测、轨迹预测与拦截决策多模块协同,产品处于同类领先水平,项目总额约 3.2 亿元,获年度优秀项目。</li>
+        <li>主导压力传感器芯片项目(2023–2024),因该项目获评 <b class="hl">福布斯 U30</b>。</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="job-org">新素代科技 <span class="job-role">/ CTO(创业)</span></div>
+        <div class="job-date">2019 – 2020</div>
+      </div>
+      <ul>
+        <li>带队完成系统架构升级,通过分布式负载均衡与自动化运维将并发能力提升约两个量级,产品用户破千万,后完成退出。</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="job-org">百度 · 国际化产品总部 <span class="job-role">/ 实习</span> ｜ 阿里巴巴 · 移动事业部 <span class="job-role">/ 实习</span></div>
+        <div class="job-date">2015 – 2018</div>
+      </div>
+      <ul>
+        <li>百度(2017–2018):参与韩语、阿拉伯语输入法研发,负责基于 NLP 的智能推荐与高并发缓存架构。</li>
+        <li>阿里巴巴(2015–2016):参与神马搜索质量监控、竞品对比与大数据挖掘工作。</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section>
+    <div class="sec-title"><span class="sec-no">04</span><span class="sec-name">代表项目</span><span class="sec-tag">Projects</span></div>
+
+    <div class="proj">
+      <div class="proj-name">SkillRL —— 智能体记忆 / 技能自进化框架(道通科技)</div>
+      <div class="proj-desc">把交互轨迹沉淀为可召回、可复用的分层记忆,用确定性评测闭环持续更新。</div>
+      <div class="kw"><span>分层记忆库</span><span>经验蒸馏/压缩</span><span>重要性打分</span><span>反思型记忆</span><span>语义检索召回</span><span>AB 评测</span></div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-name">组织级 Agent 平台记忆与人格系统(遥望科技)</div>
+      <div class="proj-desc">短期缓存 + 长期记忆协同,角色专属知识库 + 元知识库优先级调度,保障跨会话人设稳定与上下文连贯。</div>
+      <div class="kw"><span>双层记忆</span><span>上下文管理</span><span>多角色画像</span><span>人格一致性</span><span>记忆复用</span></div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-name">引导式多轮对话引擎(明日联合)</div>
+      <div class="proj-desc">面向医疗导诊的多轮对话链路,优化提问策略与上下文追踪,提升长对话信息完整度。</div>
+      <div class="kw"><span>多轮对话</span><span>上下文追踪</span><span>对话逻辑可配置</span><span>边缘端部署</span></div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-name">数字-物理智能体交互闭环(道通科技)</div>
+      <div class="proj-desc">打通数字智能体与机械臂 / 无人机等物理设备,构建感知—决策—执行闭环。</div>
+      <div class="kw"><span>具身智能</span><span>多智能体协同</span><span>端侧部署</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="grid2">
+      <div>
+        <div class="sec-title"><span class="sec-no">05</span><span class="sec-name">教育背景</span></div>
+        <table class="plain">
+          <tr><td>2016–2020</td><td><b>北京大学</b> · 人工智能(硕士),保送</td></tr>
+          <tr><td>2012–2016</td><td><b>中南大学</b> · 软件工程(本科)</td></tr>
+        </table>
+        <div class="sec-title" style="margin-top:14px;"><span class="sec-no">06</span><span class="sec-name">荣誉</span></div>
+        <ul class="honor">
+          <li>福布斯 U30 创新型领军人才</li>
+          <li>苏州张家港市领军型创业人才</li>
+        </ul>
+      </div>
+      <div>
+        <div class="sec-title"><span class="sec-no">07</span><span class="sec-name">技术栈</span></div>
+        <div class="stack">
+          <span class="chip">大模型微调</span><span class="chip">Prompt 工程</span><span class="chip">Agent 编排</span>
+          <span class="chip">RAG / 检索增强</span><span class="chip">向量数据库</span><span class="chip">语义检索</span>
+          <span class="chip">分层记忆架构</span><span class="chip">长文本摘要 / 压缩</span><span class="chip">多轮对话系统</span>
+          <span class="chip">强化学习</span><span class="chip">端侧部署(量化/剪枝)</span><span class="chip">时序建模</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
