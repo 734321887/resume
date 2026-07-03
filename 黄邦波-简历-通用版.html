@@ -3,30 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>黄邦波 · 简历 · AI 算法及交互中心负责人</title>
+<title>黄邦波 · 简历 · 通用版</title>
 <style>
   :root{
-    --brand:#E60012;
-    --bg:#FFFFFF;
-    --muted:#F2F2F2;
-    --border-strong:#464646;
-    --border:#D9D9D9;
-    --text:#000000;
-    --text-muted:#5A5A5A;
+    --brand:#E60012;--bg:#FFFFFF;--muted:#F2F2F2;--border-strong:#464646;--border:#D9D9D9;
+    --text:#000000;--text-muted:#5A5A5A;
     --font:"Microsoft YaHei","微软雅黑","PingFang SC",sans-serif;
     --mono:"SFMono-Regular",Consolas,"Courier New",monospace;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{background:#e9e9e9;}
   body{font-family:var(--font);color:var(--text);line-height:1.55;font-size:12.5px;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  .sheet{width:210mm;height:297mm;background:var(--bg);padding:14mm 15mm;box-sizing:border-box;overflow:hidden;margin:14px auto;border:1px solid var(--border);position:relative;}
 
-  .sheet{
-    width:210mm;height:297mm;background:var(--bg);
-    padding:14mm 15mm;box-sizing:border-box;overflow:hidden;
-    margin:14px auto;border:1px solid var(--border);position:relative;
-  }
-
-  /* Header */
   header{display:flex;justify-content:space-between;align-items:stretch;border-bottom:2px solid var(--brand);padding-bottom:13px;}
   .head-left{flex:1;padding-right:18px;}
   .name-row{display:flex;align-items:baseline;gap:12px;}
@@ -39,7 +28,6 @@
   .contacts .k{font-family:var(--mono);color:var(--brand);font-weight:700;}
   .photo{width:104px;height:132px;flex:none;border:1.5px solid var(--brand);object-fit:cover;object-position:center top;background:var(--muted);}
 
-  /* Section */
   section{margin-top:14px;}
   section:first-of-type{margin-top:16px;}
   .sec-title{display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--border-strong);padding-bottom:5px;margin-bottom:9px;}
@@ -51,7 +39,13 @@
   .summary li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;background:var(--brand);}
   b{font-weight:700;}
 
-  /* Evolution */
+  /* Highlights */
+  .hl-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+  .hl{border:1px solid var(--border);border-top:2px solid var(--brand);padding:7px 10px;}
+  .hl .h{font-weight:700;font-size:12.5px;}
+  .hl .d{font-size:11.3px;color:var(--text-muted);margin-top:2px;line-height:1.45;}
+  .hl .d b{color:var(--brand);}
+
   .evo{display:flex;border:1px solid var(--border);}
   .evo .stage{flex:1;padding:8px 9px;border-right:1px solid var(--border);}
   .evo .stage:last-child{border-right:none;}
@@ -61,12 +55,6 @@
   .evo .stage .tagline{display:inline-block;margin-top:4px;font-family:var(--mono);font-size:9px;border:1px solid var(--brand);color:var(--brand);padding:0 4px;}
   .evo-note{font-size:11px;color:var(--text-muted);margin-top:5px;}
 
-  /* Match table */
-  table.match{width:100%;border-collapse:collapse;}
-  table.match td{border:1px solid var(--border);padding:5px 9px;vertical-align:top;font-size:12px;}
-  table.match tr td:first-child{width:36%;background:var(--muted);font-weight:700;border-left:3px solid var(--brand);}
-
-  /* Experience */
   .job{border-left:3px solid var(--brand);background:var(--muted);padding:8px 12px;margin-bottom:9px;}
   .job-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:4px;}
   .job-org{font-size:14px;font-weight:700;}
@@ -83,7 +71,6 @@
   .role-sub{font-weight:700;}
   .cont{font-size:11px;color:var(--text-muted);font-weight:400;}
 
-  /* Projects */
   .proj{border:1px solid var(--border);border-top:2px solid var(--brand);padding:8px 12px;margin-bottom:8px;}
   .proj-name{font-weight:700;font-size:13px;}
   .proj-tag{font-family:var(--mono);font-size:10px;color:var(--text-muted);margin-left:6px;}
@@ -121,7 +108,7 @@
         <div class="name">黄邦波</div>
         <div class="name-en">HUANG BANGBO</div>
       </div>
-      <div class="target">应聘岗位:AI 算法及交互中心负责人 · 大模型 / Agent / 记忆与交互方向</div>
+      <div class="target">AI 技术负责人 / 产研负责人 · 大模型 · Agent · 具身智能</div>
       <div class="subline">北京大学 · 人工智能硕士　|　8 年 AI 研发与团队管理经验　|　福布斯 U30</div>
       <div class="contacts">
         <span><span class="k">TEL</span> 181****9303</span>
@@ -135,40 +122,48 @@
   <section>
     <div class="sec-title"><span class="sec-no">01</span><span class="sec-name">个人简介</span><span class="sec-tag">Profile</span></div>
     <ul class="summary">
-      <li>北京大学人工智能硕士,8 年 AI 一线研发与团队管理经验,先后经历 <b>传统算法与多智能体、大模型与端侧算力、AI 行业应用、Agent 平台、具身智能</b> 五个阶段,在算法、工程与产品落地上均有完整的一手经验。</li>
-      <li>近三年主要方向为 <b>大模型应用、Agent 架构、智能体记忆与对话交互</b>,负责过组织级 Agent 平台的记忆与人格模块、自研 Agent 经验沉淀框架(SkillRL)、端侧大模型部署与数字人交互等工作。</li>
-      <li>有 <b>50 人</b> 规模算法与产研团队的管理经验,建立了校招与人才储备机制,主导过多个项目从立项到落地。</li>
+      <li>北京大学人工智能硕士,8 年 AI 一线研发与团队管理经验,完整经历 <b>传统 AI / 算法 / 多智能体 → 大模型 + 端侧算力 → AI 应用 → Agent 平台 → Digital × Physical 具身智能</b> 五个阶段,是少数从 <b>数字智能体(Digital)一路带队走到物理 / 具身智能(Physical)</b> 的技术负责人。</li>
+      <li>在摩尔线程(端侧大模型与数字人)、明日联合(AI 医疗与数据中台)、遥望(AIP 组织级 Agent 平台)、道通(Digital × Physical 打通)各阶段,均亲自带队完成产品架构与核心模块落地。</li>
+      <li>有大规模团队管理与组织变革经验:曾带领最大约 <b>200 人</b> 产研团队,主导研发组织向 <b>AI Native</b> 转型——精简至 <b>60–80 人</b> 精干团队,在缩编的同时保持交付效率与产品落地节奏。</li>
       <li>主导的反无人机项目总额约 <b>3.2 亿元</b>;凭压力传感器芯片项目获评 <b>福布斯 U30</b>。</li>
     </ul>
   </section>
 
   <section>
-    <div class="sec-title"><span class="sec-no">02</span><span class="sec-name">AI 能力演进主线</span><span class="sec-tag">Evolution</span></div>
-    <div class="evo">
-      <div class="stage"><div class="yr">~2024</div><div class="st">传统 AI / 多智能体</div><div class="sd">搜索与 NLP、军工反无人机多智能体、高并发系统</div><div class="tagline">算法沉淀</div></div>
-      <div class="stage"><div class="yr">2025.1</div><div class="st">大模型 + 端侧算力</div><div class="sd">摩尔线程:数字人软硬件一体化、端侧大模型部署</div><div class="tagline">大模型</div></div>
-      <div class="stage"><div class="yr">2025.4</div><div class="st">AI 行业应用</div><div class="sd">明日联合:AI 医疗导诊与政务数据中台</div><div class="tagline">行业落地</div></div>
-      <div class="stage"><div class="yr">2025.7</div><div class="st">Agent 平台</div><div class="sd">遥望:组织级 AI 管理平台、记忆 / 人格 / 规划引擎</div><div class="tagline">平台化</div></div>
-      <div class="stage"><div class="yr">2026.1</div><div class="st">具身智能</div><div class="sd">道通:数字与物理智能体协同、SkillRL 经验沉淀</div><div class="tagline">具身</div></div>
+    <div class="sec-title"><span class="sec-no">02</span><span class="sec-name">核心优势</span><span class="sec-tag">Highlights</span></div>
+    <div class="hl-grid">
+      <div class="hl">
+        <div class="h">Digital → Physical 全链路带队</div>
+        <div class="d">从对话 / 记忆 / Agent 平台等数字智能体,到机械臂、无人机、巡检等 <b>具身智能</b>,各阶段均带团队完成落地。</div>
+      </div>
+      <div class="hl">
+        <div class="h">AI Native 组织转型</div>
+        <div class="d">推动团队与研发流程向 AI Native 重构,团队规模由约 <b>200 人精简至 60–80 人</b>,提效同时保交付。</div>
+      </div>
+      <div class="hl">
+        <div class="h">产品 0→1 与商业化</div>
+        <div class="d">主导 Agent 平台、数字人、AI 医疗等多个产品从立项到落地,兼具技术判断与商业化视角。</div>
+      </div>
+      <div class="hl">
+        <div class="h">踩在技术拐点上</div>
+        <div class="d">完整穿越算法 → 大模型 → Agent 平台 → 具身智能的周期,持续引领团队跟进前沿并落地。</div>
+      </div>
     </div>
-    <div class="evo-note">技术路线由算法与多智能体起步,逐步延伸到大模型与端侧算力、行业应用、平台化,近期进入数字-物理融合的具身智能方向。</div>
   </section>
 
   <section>
-    <div class="sec-title"><span class="sec-no">03</span><span class="sec-name">与目标岗位的能力对应</span><span class="sec-tag">Job Fit</span></div>
-    <table class="match">
-      <tr><td>长序记忆:分层存储 / 压缩召回 / 遗忘 / 反思更新</td><td>遥望 Agent 平台的双层记忆结构,道通 SkillRL 的分层技能库、经验蒸馏与失败教训反思</td></tr>
-      <tr><td>上下文管理与上下文窗口优化</td><td>智能 Plan 引擎的上下文调度,端侧长上下文压缩与内化路线的预研</td></tr>
-      <tr><td>人格一致性与人设表达</td><td>多角色 Agent 画像 + 记忆按角色隔离,保障跨会话人设稳定</td></tr>
-      <tr><td>对话交互链路</td><td>明日联合 12 种疾病多轮对话引擎与引导式对话算法重构</td></tr>
-      <tr><td>记忆 / 对话效果评估体系</td><td>自研 ClawEval 确定性评测框架(召回、AB 对比、回归)</td></tr>
-      <tr><td>检索增强 / 向量库 / 时序建模</td><td>RAG 冷启动、语义检索匹配、技能分层检索与索引</td></tr>
-      <tr><td>团队管理与人才梯队</td><td>50 人团队管理,打通北大 / 清华校招,建立算法人才储备池</td></tr>
-      <tr><td>加分:具身智能 / 智能体交互</td><td>数字与物理智能体协同、机械臂交互、数字人语音交互</td></tr>
-    </table>
+    <div class="sec-title"><span class="sec-no">03</span><span class="sec-name">AI 能力演进主线</span><span class="sec-tag">Evolution</span></div>
+    <div class="evo">
+      <div class="stage"><div class="yr">~2024</div><div class="st">传统 AI / 多智能体</div><div class="sd">搜索与 NLP、军工反无人机多智能体、高并发系统</div><div class="tagline">算法沉淀</div></div>
+      <div class="stage"><div class="yr">2025.1</div><div class="st">大模型 + 端侧算力</div><div class="sd">摩尔线程:数字人软硬件一体化、端侧大模型部署</div><div class="tagline">大模型</div></div>
+      <div class="stage"><div class="yr">2025.4</div><div class="st">AI 应用</div><div class="sd">明日联合:AI 医疗导诊 + 政务数据中台</div><div class="tagline">AI 应用</div></div>
+      <div class="stage"><div class="yr">2025.7</div><div class="st">Agent 平台(AIP)</div><div class="sd">遥望:组织级 AI 管理平台</div><div class="tagline">Agent 平台</div></div>
+      <div class="stage"><div class="yr">2026.1</div><div class="st">Digital × Physical</div><div class="sd">道通:数字与物理智能体打通、SkillRL</div><div class="tagline">具身智能</div></div>
+    </div>
+    <div class="evo-note">传统 AI / 算法 / 多智能体(2024 前) → 大模型 + 端侧算力(摩尔线程) → AI 医疗 + 数据中台(明日联合) → AIP 组织级 AI 管理平台(遥望) → Digital × Physical Agent 打通(道通)。</div>
   </section>
 
-  <div class="foot"><span>黄邦波 · 简历</span><span>P.1 / 4</span></div>
+  <div class="foot"><span>黄邦波 · 简历(通用版)</span><span>P.1 / 4</span></div>
 </div>
 
 <!-- ============ SHEET 2 ============ -->
@@ -178,51 +173,45 @@
 
     <div class="job">
       <div class="job-head"><div class="job-org">道通科技 <span class="job-role">/ 技术 VP(Digital Agent 团队)</span></div><div class="job-date">2026.01 – 2026.04</div></div>
-      <div class="job-dir">方向:具身智能 · 数字与物理智能体协同</div>
+      <div class="job-dir">阶段五 · 具身智能:Digital × Physical Agent 打通</div>
       <ul>
-        <li><span class="role-sub">SkillRL(Agent 经验沉淀框架):</span>主导设计一套把交互轨迹沉淀为可召回、可复用记忆/技能的框架,由四个模块组成:
-          <ul>
-            <li>SkillCreate 基于行业知识做 RAG 冷启动生成种子技能;AutoAgent 从成功轨迹提炼策略、从失败轨迹反事实提炼教训;</li>
-            <li>ClawEval 在沙箱中做确定性评分与 AB 对比(不依赖 LLM 打分),Skill Hub 负责语义检索与分层复用;</li>
-            <li>在机械臂抓取任务上,引入技能记忆后成功率约 <span class="metric">60% → 85%</span>,并明显降低轨迹的上下文占用。</li>
-          </ul>
-        </li>
-        <li><span class="role-sub">巡检行业多智能体与数据 OS:</span>牵头技术方案与落地规划,采用"数据 OS + AgentOS 底座、快慢双系统、多智能体协同、端边云执行、驾驶舱管控"的分层架构,以"虚拟沙盒迭代 + 真实场景校验"打通数字与物理环节,覆盖电力、化工、安防、轨道交通等场景(含深圳交警试点),并完成竞品分析与分阶段落地规划。</li>
+        <li><span class="role-sub">SkillRL(Agent 经验沉淀框架):</span>带队设计一套把交互轨迹沉淀为可召回、可复用记忆/技能的框架——SkillCreate 冷启动生成、AutoAgent 蒸馏(成功策略 / 失败教训)、ClawEval 沙箱确定性评测、Skill Hub 语义检索复用;机械臂抓取任务引入技能记忆后成功率约 <span class="metric">60% → 85%</span>。</li>
+        <li><span class="role-sub">巡检行业多智能体与数据 OS:</span>牵头"数据 OS + AgentOS 底座、快慢双系统、多智能体协同、端边云执行、驾驶舱管控"的分层架构,以"虚拟沙盒 + 真实场景校验"打通数字与物理环节,覆盖电力、化工、安防、轨交(含深圳交警试点)。</li>
+        <li>带领团队完成从数字智能体到 <b>物理 / 具身智能体</b> 的跨越落地。</li>
       </ul>
     </div>
 
     <div class="job">
       <div class="job-head"><div class="job-org">遥望科技(A 股上市) <span class="job-role">/ 产研总监</span></div><div class="job-date">2025.07 – 2026.01</div></div>
-      <div class="job-dir">方向:Agent 平台 · 记忆、人格与规划引擎</div>
+      <div class="job-dir">阶段四 · Agent 平台(AIP):组织级 AI 管理平台</div>
       <ul>
-        <li><span class="role-sub">产品与架构:</span>负责面向复杂任务的 Agent 平台(组织级 AI 管理平台)的产研,确立"组织智慧中枢"的产品定位,设计"标准化 SOP + 智能 Plan 引擎 + 多维度资源协同"的底层架构。</li>
-        <li><span class="role-sub">记忆与人格:</span>为每个 Agent 设计短期缓存与长期记忆协同的双层结构,构建角色专属知识库,并通过元知识库对全局与个体知识做优先级调度;支持自定义角色画像(领域/目标/权限),记忆按角色隔离,保障跨会话下的人设一致。</li>
-        <li><span class="role-sub">核心模块:</span>智能 Plan 规划引擎(支持任务的动态调整、暂停与重跑)、全域资源协同(云盘/知识库/数据库)、多角色协作机制与管理驾驶舱。</li>
-        <li><span class="role-sub">工程优化:</span>通过优化连接池与数据扫描策略,将复杂任务的上下文调度耗时从数十秒级降至毫秒级,数据一致性保障率约 <span class="metric">99%</span>。</li>
+        <li><span class="role-sub">产品与架构:</span>负责面向复杂任务的 Agent 平台(组织级 AI 管理平台)产研,确立"组织智慧中枢"定位,设计"标准化 SOP + 智能 Plan 引擎 + 多维度资源协同"底层架构。</li>
+        <li><span class="role-sub">记忆与人格:</span>短期缓存 + 长期记忆的双层结构,角色专属知识库 + 元知识库优先级调度,多角色画像与记忆隔离保障跨会话人设一致。</li>
+        <li><span class="role-sub">组织与协同:</span>统筹产研、业务、客户端团队,推动研发流程向 AI Native 转型:团队由约 <span class="metric">200 人</span> 精简至 <span class="metric">60–80 人</span>,以 Agent 驱动研发提效,在缩编的同时保持平台在多业务场景落地。</li>
       </ul>
     </div>
 
     <div class="job">
       <div class="job-head"><div class="job-org">广东明日联合 <span class="job-role">/ 高级 AI 技术总监</span></div><div class="job-date">2025.04 – 2025.07</div></div>
-      <div class="job-dir">方向:AI 行业应用 · 医疗对话与数据中台</div>
+      <div class="job-dir">阶段三 · AI 应用:AI 医疗 + 数据中台</div>
       <ul>
-        <li><span class="role-sub">AI 医疗(智能导诊):</span>重构低算力场景下的引导式对话算法,使单轮对话中用户平均可澄清的症状信息从 <span class="metric">3 项 → 约 12 项</span>,支持多症状、模糊语义与中英双语;搭建 12 种常见疾病的多轮对话流程引擎;结合剪枝与 INT8 量化,在老旧边缘设备上约 200ms 响应,科室推荐准确率约 <span class="metric">65% → 90%</span>。</li>
-        <li><span class="role-sub">政务数据中台:</span>完成约 <span class="metric">4500 万元</span> 项目申报方案,落地多个政务智能体场景(智能咨询、数据治理、决策辅助),推动进入省级示范工程候选。</li>
-        <li><span class="role-sub">研发效能:</span>搭建低代码开发平台与 AI 工具链,支撑 12 个项目并行开发,项目周期约缩短 60%、研发成本约降低 45%;打通北大、清华校招渠道,建立算法人才储备池。</li>
+        <li><span class="role-sub">AI 医疗(智能导诊):</span>重构低算力场景引导式对话算法,用户平均可澄清症状信息从 <span class="metric">3 项 → 约 12 项</span>;12 种疾病多轮对话引擎;边缘设备约 200ms 响应,科室推荐准确率约 <span class="metric">65% → 90%</span>。</li>
+        <li><span class="role-sub">数据中台:</span>完成约 <span class="metric">4500 万元</span> 政务项目申报方案,落地多个政务智能体场景,进入省级示范工程候选。</li>
+        <li><span class="role-sub">研发效能:</span>搭建低代码平台与 AI 工具链,支撑 12 个项目并行开发,周期约缩短 60%、成本约降低 45%;打通北大 / 清华校招,建立算法人才储备池。</li>
       </ul>
     </div>
 
     <div class="job">
       <div class="job-head"><div class="job-org">摩尔线程 <span class="job-role">/ AI 战略经理</span></div><div class="job-date">2025.01 – 2025.04</div></div>
-      <div class="job-dir">方向:大模型 + 端侧算力</div>
+      <div class="job-dir">阶段二 · 大模型 + 端侧算力</div>
       <ul>
-        <li><span class="role-sub">数字人软硬件一体化:</span>基于自研 GPU 算力盒与自研语音、数字人模型做端侧渲染与推理优化,端到端交互延迟控制在 2 秒内,较传统方案降低约 30% 部署成本;支持 30 秒音色复刻(相似度约 90%)、面部多控制点情感表达与全双工交互。</li>
-        <li><span class="role-sub">算力本产品:</span>规划以异构 AI 算力 + 自研操作系统为核心的端侧生产力产品,跨 Windows/Linux/Android,支持 Qwen、DeepSeek 等大模型端侧部署,并设计端云协同的算力扩展方案。</li>
+        <li><span class="role-sub">数字人软硬件一体化:</span>基于自研 GPU 与语音、数字人模型做端侧渲染与推理优化,交互延迟控制在 2 秒内,较传统方案降本约 30%;支持 30 秒音色复刻、面部多控制点情感表达与全双工交互。</li>
+        <li><span class="role-sub">算力本产品:</span>规划异构算力 + 自研操作系统的端侧生产力产品,跨三大系统,支持 Qwen、DeepSeek 等大模型端侧部署与端云协同。</li>
       </ul>
     </div>
   </section>
 
-  <div class="foot"><span>黄邦波 · 简历</span><span>P.2 / 4</span></div>
+  <div class="foot"><span>黄邦波 · 简历(通用版)</span><span>P.2 / 4</span></div>
 </div>
 
 <!-- ============ SHEET 3 ============ -->
@@ -232,7 +221,7 @@
 
     <div class="job">
       <div class="job-head"><div class="job-org">某军工单位 <span class="job-role">/ 项目负责人</span></div><div class="job-date">2020 – 2024</div></div>
-      <div class="job-dir">方向:多智能体系统 · 目标识别与决策</div>
+      <div class="job-dir">阶段一 · 多智能体系统:目标识别与决策</div>
       <ul>
         <li>负责反无人机多智能体防御项目,融合目标检测、轨迹预测与拦截决策等模块,在复杂环境下达到较高拦截成功率;项目总额约 <span class="metric">3.2 亿元</span>,获评年度优秀项目。</li>
         <li>主导压力传感器芯片项目(2023–2024),产品在细分领域表现领先,凭此获评 <b>福布斯 U30</b>。</li>
@@ -262,37 +251,34 @@
       <div class="proj-name">SkillRL —— 智能体记忆 / 技能沉淀框架<span class="proj-tag">道通科技 · 2026</span></div>
       <div class="proj-desc">在不改动模型权重的前提下,通过沉淀与复用交互经验来提升业务表现。</div>
       <ul>
-        <li>分层记忆库:按"通用 + 场景特定"分层存储,语义检索按需召回,降低上下文冗余;</li>
-        <li>经验蒸馏:成功轨迹提炼策略、失败轨迹提炼教训,把冗长轨迹压缩为结构化记忆;</li>
-        <li>评测闭环:ClawEval 基于沙箱做确定性打分,支撑"生成—评测—回流"的更新机制;</li>
-        <li>端侧内化:规划将技能内化到小模型,减少推理时对检索的依赖(参考 SKILL0 路线)。</li>
+        <li>分层记忆库 + 经验蒸馏(成功策略 / 失败教训)+ ClawEval 确定性评测 + Skill Hub 语义检索复用;</li>
+        <li>规划技能端侧内化,减少推理时检索依赖;机械臂抓取成功率约 60% → 85%。</li>
       </ul>
-      <div class="kw"><span>分层记忆</span><span>经验蒸馏</span><span>重要性打分</span><span>反思型记忆</span><span>语义检索</span><span>AB 评测</span></div>
+      <div class="kw"><span>分层记忆</span><span>经验蒸馏</span><span>反思型记忆</span><span>语义检索</span><span>具身智能</span></div>
     </div>
 
     <div class="proj">
-      <div class="proj-name">组织级 Agent 平台:记忆与人格模块<span class="proj-tag">遥望科技 · 2025</span></div>
-      <div class="proj-desc">面向复杂任务的 Agent 平台,解决长周期、跨会话交互中的记忆连贯与人设稳定。</div>
+      <div class="proj-name">组织级 Agent 平台(AIP)<span class="proj-tag">遥望科技 · 2025</span></div>
+      <div class="proj-desc">面向复杂任务的可商用 Agent 平台,SOP + Plan 引擎 + 多维资源协同。</div>
       <ul>
-        <li>短期缓存 + 长期记忆的双层结构,角色专属知识库配合元知识库做优先级调度;</li>
-        <li>多角色画像与记忆隔离保障人格一致;智能 Plan 引擎负责上下文组织与任务拆解;</li>
+        <li>双层记忆 + 多角色人格,智能 Plan 引擎负责任务拆解与上下文组织;</li>
         <li>上下文调度耗时由数十秒级优化到毫秒级,数据一致性约 99%。</li>
       </ul>
-      <div class="kw"><span>双层记忆</span><span>上下文管理</span><span>多角色画像</span><span>人格一致性</span><span>Plan 引擎</span></div>
+      <div class="kw"><span>Agent 平台</span><span>双层记忆</span><span>Plan 引擎</span><span>多角色协作</span><span>0→1</span></div>
     </div>
 
     <div class="proj">
       <div class="proj-name">AI 医疗智能导诊 + 政务数据中台<span class="proj-tag">明日联合 · 2025</span></div>
-      <div class="proj-desc">低算力场景下的多轮对话交互系统,以及政务数据中台与智能体应用。</div>
+      <div class="proj-desc">低算力场景多轮对话交互系统,以及政务数据中台与智能体应用。</div>
       <ul>
-        <li>引导式多轮对话:症状澄清由 3 项提升到约 12 项,12 种疾病对话引擎,边缘约 200ms 响应;</li>
-        <li>政务:约 4500 万元申报方案与多个政务智能体场景,进入省级示范候选。</li>
+        <li>引导式多轮对话:症状澄清由 3 项提升到约 12 项,边缘约 200ms 响应;</li>
+        <li>约 4500 万元政务申报方案与多个政务智能体场景,进入省级示范候选。</li>
       </ul>
-      <div class="kw"><span>多轮对话</span><span>上下文追踪</span><span>边缘部署</span><span>RAG</span><span>数据中台</span></div>
+      <div class="kw"><span>多轮对话</span><span>RAG</span><span>边缘部署</span><span>数据中台</span></div>
     </div>
   </section>
 
-  <div class="foot"><span>黄邦波 · 简历</span><span>P.3 / 4</span></div>
+  <div class="foot"><span>黄邦波 · 简历(通用版)</span><span>P.3 / 4</span></div>
 </div>
 
 <!-- ============ SHEET 4 ============ -->
@@ -304,7 +290,7 @@
       <div class="proj-name">数字人软硬件一体化与端侧算力产品<span class="proj-tag">摩尔线程 · 2025</span></div>
       <div class="proj-desc">基于国产 GPU 的端侧数字人与大模型生产力方案。</div>
       <ul>
-        <li>端侧渲染与推理延迟控制在 2 秒内,降低约 30% 部署成本;支持快速音色复刻与全双工交互;</li>
+        <li>端侧渲染与推理延迟控制在 2 秒内,降本约 30%;支持快速音色复刻与全双工交互;</li>
         <li>异构算力产品跨三大系统,支持主流开源大模型端侧部署与端云协同。</li>
       </ul>
       <div class="kw"><span>端侧大模型</span><span>数字人</span><span>语音交互</span><span>异构算力</span><span>端云协同</span></div>
@@ -340,16 +326,16 @@
         <div class="sec-title"><span class="sec-no">08</span><span class="sec-name">技术栈</span></div>
         <div class="stack">
           <span class="chip">大模型微调</span><span class="chip">Prompt 工程</span><span class="chip">Agent 编排</span>
-          <span class="chip">RAG / 检索增强</span><span class="chip">向量数据库</span><span class="chip">语义检索</span>
-          <span class="chip">分层记忆架构</span><span class="chip">长文本压缩</span><span class="chip">多轮对话系统</span>
-          <span class="chip">强化学习</span><span class="chip">端侧部署(量化/剪枝)</span><span class="chip">时序建模</span>
-          <span class="chip">多智能体协同</span><span class="chip">高并发架构</span>
+          <span class="chip">RAG / 检索增强</span><span class="chip">向量数据库</span><span class="chip">分层记忆架构</span>
+          <span class="chip">多轮对话系统</span><span class="chip">强化学习</span><span class="chip">端侧部署(量化/剪枝)</span>
+          <span class="chip">多智能体协同</span><span class="chip">具身智能</span><span class="chip">数字人 / 语音</span>
+          <span class="chip">高并发架构</span><span class="chip">团队管理</span><span class="chip">AI Native 转型</span>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="foot"><span>黄邦波 · 简历 · AI 算法及交互中心负责人</span><span>P.4 / 4</span></div>
+  <div class="foot"><span>黄邦波 · 简历(通用版) · 大模型 · Agent · 具身智能</span><span>P.4 / 4</span></div>
 </div>
 
 </body>
