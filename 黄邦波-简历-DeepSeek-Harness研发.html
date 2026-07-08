@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>黄邦波 · 简历 · DeepSeek Harness 研发</title>
+<style>
+  :root{
+    --brand:#E60012;--bg:#FFFFFF;--muted:#F2F2F2;--border-strong:#464646;--border:#D9D9D9;
+    --text:#000000;--text-muted:#5A5A5A;
+    --font:"Microsoft YaHei","微软雅黑","PingFang SC",sans-serif;
+    --mono:"SFMono-Regular",Consolas,"Courier New",monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{background:#e9e9e9;}
+  body{font-family:var(--font);color:var(--text);line-height:1.55;font-size:12.5px;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  .sheet{width:210mm;height:297mm;background:var(--bg);padding:14mm 15mm;box-sizing:border-box;overflow:hidden;margin:14px auto;border:1px solid var(--border);position:relative;}
+
+  header{display:flex;justify-content:space-between;align-items:stretch;border-bottom:2px solid var(--brand);padding-bottom:13px;}
+  .head-left{flex:1;padding-right:18px;}
+  .name-row{display:flex;align-items:baseline;gap:12px;}
+  .name{font-size:31px;font-weight:700;letter-spacing:5px;}
+  .name-en{font-family:var(--mono);font-size:12px;color:var(--text-muted);letter-spacing:1px;}
+  .target{display:inline-block;margin-top:9px;border-left:4px solid var(--brand);padding:2px 10px;font-size:14px;font-weight:700;background:var(--muted);}
+  .subline{margin-top:8px;color:var(--text-muted);font-size:12.5px;}
+  .contacts{margin-top:8px;font-size:12.5px;display:flex;flex-wrap:wrap;gap:5px 16px;}
+  .contacts span{display:inline-flex;align-items:center;gap:5px;}
+  .contacts .k{font-family:var(--mono);color:var(--brand);font-weight:700;}
+  .photo{width:104px;height:132px;flex:none;border:1.5px solid var(--brand);object-fit:cover;object-position:center top;background:var(--muted);}
+
+  section{margin-top:14px;}
+  section:first-of-type{margin-top:16px;}
+  .sec-title{display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--border-strong);padding-bottom:5px;margin-bottom:9px;}
+  .sec-no{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--bg);background:var(--brand);padding:1px 7px;letter-spacing:1px;}
+  .sec-name{font-size:15px;font-weight:700;letter-spacing:2px;}
+  .sec-tag{margin-left:auto;font-family:var(--mono);font-size:10.5px;color:var(--text-muted);letter-spacing:1px;text-transform:uppercase;}
+
+  .summary li{list-style:none;position:relative;padding-left:16px;margin-bottom:5px;}
+  .summary li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;background:var(--brand);}
+  b{font-weight:700;}
+
+  .paper{border:1px solid var(--border);border-left:4px solid var(--brand);background:var(--muted);padding:10px 12px;}
+  .paper-title{font-weight:700;font-size:13px;line-height:1.45;}
+  .paper-meta{font-family:var(--mono);font-size:11px;color:var(--brand);margin-top:5px;font-weight:700;}
+  .paper ul{margin:6px 0 0;padding-left:0;}
+  .paper li{list-style:none;position:relative;padding-left:14px;margin-bottom:3px;font-size:12px;}
+  .paper li::before{content:"▸";position:absolute;left:0;color:var(--brand);font-size:11px;}
+
+  table.match{width:100%;border-collapse:collapse;}
+  table.match td{border:1px solid var(--border);padding:5px 9px;vertical-align:top;font-size:11.5px;}
+  table.match tr td:first-child{width:34%;background:var(--muted);font-weight:700;border-left:3px solid var(--brand);}
+
+  .proj{border:1px solid var(--border);border-top:2px solid var(--brand);padding:8px 12px;margin-bottom:8px;}
+  .proj-name{font-weight:700;font-size:13px;}
+  .proj-tag{font-family:var(--mono);font-size:10px;color:var(--text-muted);margin-left:6px;}
+  .proj-desc{color:var(--text-muted);font-size:11.5px;margin:3px 0 5px;font-style:italic;}
+  .proj ul{margin:0;padding-left:0;}
+  .proj li{list-style:none;position:relative;padding-left:13px;margin-bottom:3px;font-size:11.6px;}
+  .proj li::before{content:"—";position:absolute;left:0;color:var(--brand);}
+  .kw{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px;}
+  .kw span{font-family:var(--mono);font-size:10px;border:1px solid var(--border);padding:1px 6px;background:var(--muted);}
+
+  .job{border-left:3px solid var(--brand);background:var(--muted);padding:8px 12px;margin-bottom:8px;}
+  .job-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:4px;}
+  .job-org{font-size:13.5px;font-weight:700;}
+  .job-role{color:var(--text-muted);font-weight:400;font-size:12px;}
+  .job-date{font-family:var(--mono);font-size:11.5px;color:var(--brand);font-weight:700;white-space:nowrap;}
+  .job ul{margin:4px 0 0;padding-left:0;}
+  .job li{list-style:none;position:relative;padding-left:14px;margin-bottom:3px;font-size:11.8px;}
+  .job li::before{content:"▸";position:absolute;left:0;color:var(--brand);font-size:11px;top:1px;}
+  .metric{font-family:var(--mono);color:var(--brand);font-weight:700;}
+  .role-sub{font-weight:700;}
+
+  table.plain{width:100%;border-collapse:collapse;}
+  table.plain td{border:1px solid var(--border);padding:5px 8px;font-size:12px;}
+  table.plain tr td:first-child{background:var(--muted);font-family:var(--mono);font-size:11px;color:var(--text-muted);white-space:nowrap;}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .honor li{list-style:none;position:relative;padding-left:15px;margin-bottom:4px;font-size:12px;}
+  .honor li::before{content:"★";position:absolute;left:0;color:var(--brand);font-size:11px;}
+  .stack .chip{display:inline-block;border:1px solid var(--border);border-left:3px solid var(--brand);background:var(--muted);padding:1px 7px;margin:0 4px 5px 0;font-size:11px;}
+  .stack-group{margin-bottom:8px;}
+  .stack-label{font-weight:700;font-size:11.5px;margin-bottom:4px;color:var(--text-muted);}
+  .foot{position:absolute;left:15mm;right:15mm;bottom:7mm;border-top:1px solid var(--border);padding-top:4px;font-family:var(--mono);font-size:9px;color:var(--text-muted);display:flex;justify-content:space-between;}
+
+  @media print{
+    html,body{background:#fff;}
+    .sheet{margin:0;border:none;box-shadow:none;page-break-after:always;}
+    .sheet:last-child{page-break-after:auto;}
+  }
+  @page{size:A4;margin:0;}
+</style>
+</head>
+<body>
+
+<!-- ============ SHEET 1 ============ -->
+<div class="sheet">
+  <header>
+    <div class="head-left">
+      <div class="name-row">
+        <div class="name">黄邦波</div>
+        <div class="name-en">HUANG BANGBO</div>
+      </div>
+      <div class="target">应聘岗位:DeepSeek Harness 研发工程师</div>
+      <div class="subline">北京大学 · 人工智能硕士(保送)　|　1996 年生　|　NeurIPS 投稿通讯作者　|　8 年 AI 研发经验</div>
+      <div class="contacts">
+        <span><span class="k">TEL</span> 181****9303</span>
+        <span><span class="k">MAIL</span> 734****@qq.com</span>
+        <span><span class="k">NOTE</span> 完整联系方式可面谈提供</span>
+      </div>
+    </div>
+    <img class="photo" src="359f12d67254c3f63afd8406e0e2d6c0.jpg" alt="黄邦波">
+  </header>
+
+  <section>
+    <div class="sec-title"><span class="sec-no">01</span><span class="sec-name">科研与论文</span><span class="sec-tag">Research</span></div>
+    <div class="paper">
+      <div class="paper-title">RepoContraAudit: Explainable Repository-Level Code Auditing via Multimodal Anti-Fact Reasoning</div>
+      <div class="paper-meta">NeurIPS 投稿中　|　通讯作者</div>
+      <ul>
+        <li><b>方向:</b> 仓库级代码审计、多模态推理、可解释性反事实验证——与代码类 Agent / Harness 在真实代码库上的行为分析、评测与反馈闭环高度相关</li>
+        <li><b>贡献:</b> 主导问题定义与研究路线,设计 Multimodal Anti-Fact 推理框架,推动可解释审计链路从假设生成到证据核验的完整闭环;与研究员协作完成实验设计与论文撰写</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-title"><span class="sec-no">02</span><span class="sec-name">个人简介</span><span class="sec-tag">Profile</span></div>
+    <ul class="summary">
+      <li>北京大学人工智能硕士,本科中南大学软件工程;<b>1996 年生</b>,一线 AI 研发 8 年,完整经历 <b>算法 → 大模型端侧部署 → Agent 平台 → Harness 式经验沉淀框架</b> 的技术演进。</li>
+      <li><b>Agent / Harness 深度实践者:</b> 日常高强度使用 Cursor、Claude Code 等代码类 Agent 及通用 Agent 产品,将 Agent 辅助开发融入产研全流程;对模型行为、开发者体验(DX)与 Harness 设计有持续判断力。</li>
+      <li><b>Harness 相关一手经验:</b> 主导设计 SkillRL(Agent 经验沉淀与复用框架)、组织级 Agent 平台 AIP 的 Plan 引擎与上下文调度、ClawEval 确定性评测沙箱——覆盖 Agent Loop、Tool Use、Memory、Context Engineering、评测回归等 Harness 核心课题。</li>
+      <li>有与研究员深度协作经验(论文、框架预研、模型行为分析),擅长在 AI 辅助下快速进入新语言/新框架并保证工程质量;小团队快速迭代经验丰富。</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-title"><span class="sec-no">03</span><span class="sec-name">与岗位要求的能力对应</span><span class="sec-tag">Job Fit</span></div>
+    <table class="match">
+      <tr><td>Harness 技术架构与选型</td><td>SkillRL 四层架构(SkillCreate / AutoAgent / ClawEval / Skill Hub);AIP「SOP + Plan 引擎 + 资源协同」底座设计</td></tr>
+      <tr><td>Harness 产品开发</td><td>带队落地 Agent 平台核心模块:规划引擎、记忆调度、上下文优化、多角色协作与管理驾驶舱</td></tr>
+      <tr><td>与研究员协作、前沿创新</td><td>NeurIPS 投稿通讯作者;端侧长上下文压缩与内化路线预研;SkillRL 经验蒸馏与失败反思机制</td></tr>
+      <tr><td>模型与 Harness 共同进化</td><td>机械臂任务引入技能记忆后成功率 <span class="metric">60%→85%</span>;上下文调度由数十秒级降至毫秒级;端侧 Qwen/DeepSeek 部署与端云协同</td></tr>
+      <tr><td>内部真实任务驱动迭代</td><td>ClawEval 沙箱确定性评测 + AB 对比 + 回归;导诊引擎在边缘设备上迭代至 200ms / 90% 准确率</td></tr>
+      <tr><td>Agent 高强度用户 &amp; DX 感知</td><td>推动团队 AI Native 研发转型,搭建低代码 + AI 工具链,12 项目并行、周期缩短约 60%</td></tr>
+      <tr><td>LLM / Agent 机制</td><td>Agent Loop · Tool Use · Reasoning · Planning · Skills · MCP · Memory · Subagent · Multi-Agent · KV Cache · RAG</td></tr>
+      <tr><td>Prompt / Context / Harness Engineering</td><td>分层记忆与角色隔离、技能分层检索、上下文窗口优化、引导式对话与 Plan 动态重跑</td></tr>
+    </table>
+  </section>
+
+  <div class="foot"><span>黄邦波 · DeepSeek Harness 简历</span><span>P.1 / 3</span></div>
+</div>
+
+<!-- ============ SHEET 2 ============ -->
+<div class="sheet">
+  <section style="margin-top:0;">
+    <div class="sec-title"><span class="sec-no">04</span><span class="sec-name">Harness 相关核心项目</span><span class="sec-tag">Projects</span></div>
+
+    <div class="proj">
+      <div class="proj-name">SkillRL —— Agent 经验沉淀与 Harness 评测框架<span class="proj-tag">道通科技 · 2026</span></div>
+      <div class="proj-desc">在不改动模型权重的前提下,通过 Harness 层沉淀与复用交互经验提升任务表现。</div>
+      <ul>
+        <li><span class="role-sub">SkillCreate:</span> 基于行业知识 RAG 冷启动生成种子 Skills</li>
+        <li><span class="role-sub">AutoAgent:</span> 从成功轨迹蒸馏策略、从失败轨迹反事实提炼教训(Reflection)</li>
+        <li><span class="role-sub">ClawEval:</span> 沙箱内确定性评分与 AB 对比,不依赖 LLM 自评,支撑 Harness 回归评测</li>
+        <li><span class="role-sub">Skill Hub:</span> 语义检索与分层复用,降低轨迹上下文占用</li>
+        <li>机械臂抓取成功率约 <span class="metric">60%→85%</span>,为「模型行为 ↔ Harness 能力」共同迭代提供可量化反馈源</li>
+      </ul>
+      <div class="kw"><span>Harness Engineering</span><span>Skills</span><span>Memory</span><span>AB 评测</span><span>Reflection</span></div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-name">组织级 Agent 平台 AIP<span class="proj-tag">遥望科技 · 2025</span></div>
+      <div class="proj-desc">面向复杂任务的组织级 Agent Harness:SOP 编排 + 智能 Plan + 多维资源协同。</div>
+      <ul>
+        <li><span class="role-sub">Plan 引擎:</span> 任务动态调整、暂停与重跑;复杂任务上下文调度由数十秒级优化至毫秒级</li>
+        <li><span class="role-sub">Memory:</span> 短期缓存 + 长期记忆双层结构;角色专属知识库 + 元知识库优先级调度;跨会话人设一致</li>
+        <li><span class="role-sub">Multi-Agent:</span> 多角色画像、记忆隔离与协作机制;对接云盘 / 知识库 / 数据库等资源;数据一致性约 <span class="metric">99%</span></li>
+      </ul>
+      <div class="kw"><span>Context Engineering</span><span>Planning</span><span>Multi-Agent</span><span>Tool Use</span></div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-name">RepoContraAudit —— 代码审计与 Agent 行为研究<span class="proj-tag">科研 · 2025–2026</span></div>
+      <div class="proj-desc">面向仓库级代码的 Multimodal Anti-Fact 推理与可解释审计,为代码类 Agent 的可靠性评测提供研究基础。</div>
+      <ul>
+        <li>代码库级上下文理解、工具调用链验证、反事实检验——与 Harness 评测闭环直接衔接</li>
+        <li>NeurIPS 投稿中,通讯作者;与研究员深度协作完成框架设计与实验验证</li>
+      </ul>
+      <div class="kw"><span>Code Agent</span><span>Multimodal</span><span>Anti-Fact</span><span>NeurIPS</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-title"><span class="sec-no">05</span><span class="sec-name">工作经历</span><span class="sec-tag">Experience</span></div>
+
+    <div class="job">
+      <div class="job-head"><div class="job-org">道通科技 <span class="job-role">/ 技术 VP(Digital Agent 团队)</span></div><div class="job-date">2026.01 – 2026.04</div></div>
+      <ul>
+        <li>主导 SkillRL Harness 框架设计与落地;牵头「数据 OS + AgentOS + 快慢双系统 + 端边云执行」分层架构</li>
+        <li>以「虚拟沙盒迭代 + 真实场景校验」打通数字 Agent 与物理执行环节</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><div class="job-org">遥望科技(A 股上市) <span class="job-role">/ 产研总监</span></div><div class="job-date">2025.07 – 2026.01</div></div>
+      <ul>
+        <li>负责组织级 Agent 平台 AIP 产研,交付 Plan 引擎、记忆与人格、资源协同等 Harness 核心模块</li>
+        <li>推动研发流程 AI Native 转型,以 Agent 驱动内部真实任务提效</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><div class="job-org">广东明日联合 <span class="job-role">/ 高级 AI 技术总监</span></div><div class="job-date">2025.04 – 2025.07</div></div>
+      <ul>
+        <li>重构引导式对话算法(Context / Prompt Engineering),多轮对话引擎覆盖 12 种疾病;边缘约 200ms 响应,准确率 <span class="metric">65%→90%</span></li>
+        <li>搭建低代码平台与 AI 工具链,支撑 12 项目并行快速迭代</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><div class="job-org">摩尔线程 <span class="job-role">/ AI 战略经理</span></div><div class="job-date">2025.01 – 2025.04</div></div>
+      <ul>
+        <li>端侧大模型(Qwen、DeepSeek)部署与端云协同;数字人全双工交互 Harness,端到端延迟控制在 2 秒内</li>
+        <li>参与长上下文压缩与内化路线预研,关注 KV Cache 与端侧推理优化</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="foot"><span>黄邦波 · DeepSeek Harness 简历</span><span>P.2 / 3</span></div>
+</div>
+
+<!-- ============ SHEET 3 ============ -->
+<div class="sheet">
+  <section style="margin-top:0;">
+    <div class="sec-title"><span class="sec-no">05</span><span class="sec-name">工作经历(续)</span><span class="sec-tag">Experience</span></div>
+
+    <div class="job">
+      <div class="job-head"><div class="job-org">某军工单位 <span class="job-role">/ 项目负责人</span></div><div class="job-date">2020 – 2024</div></div>
+      <ul>
+        <li>反无人机多智能体系统:目标检测、轨迹预测、拦截决策的多 Agent 协同与 Tool Use 式模块编排</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><div class="job-org">新素代科技 <span class="job-role">/ CTO(创业)</span></div><div class="job-date">2019 – 2020</div></div>
+      <ul>
+        <li>小团队快速迭代:系统架构升级,并发能力提升约两个量级,用户规模破千万</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head"><div class="job-org">百度 · 国际化产品总部 <span class="job-role">/ 实习</span>　｜　阿里巴巴 · 移动事业部 <span class="job-role">/ 实习</span></div><div class="job-date">2015 – 2018</div></div>
+      <ul>
+        <li>百度(2017–2018):韩语、阿拉伯语输入法 NLP 智能推荐与缓存架构</li>
+        <li>阿里巴巴(2015–2016):神马搜索质量监控与大数据挖掘</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="grid2">
+      <div>
+        <div class="sec-title"><span class="sec-no">06</span><span class="sec-name">教育背景</span></div>
+        <table class="plain">
+          <tr><td>2016–2020</td><td><b>北京大学</b> · 人工智能(硕士),保送</td></tr>
+          <tr><td>2012–2016</td><td><b>中南大学</b> · 软件工程(本科)</td></tr>
+        </table>
+        <div class="sec-title" style="margin-top:13px;"><span class="sec-no">07</span><span class="sec-name">荣誉与其他</span></div>
+        <ul class="honor">
+          <li>福布斯 U30 创新型领军人才</li>
+          <li>军工年度优秀项目(反无人机,项目总额约 3.2 亿元)</li>
+          <li>英文工作能力:百度国际化产品、技术文档与开源社区阅读写作</li>
+        </ul>
+      </div>
+      <div>
+        <div class="sec-title"><span class="sec-no">08</span><span class="sec-name">技术栈</span></div>
+        <div class="stack">
+          <div class="stack-group">
+            <div class="stack-label">Harness &amp; Agent</div>
+            <span class="chip">Agent Loop</span><span class="chip">Tool Use</span><span class="chip">MCP</span>
+            <span class="chip">Skills</span><span class="chip">Subagent</span><span class="chip">Multi-Agent</span>
+            <span class="chip">Planning</span><span class="chip">Reasoning</span><span class="chip">Memory</span>
+            <span class="chip">Context Engineering</span><span class="chip">Harness Engineering</span>
+          </div>
+          <div class="stack-group">
+            <div class="stack-label">LLM &amp; 工程</div>
+            <span class="chip">LLM API</span><span class="chip">KV Cache</span><span class="chip">RAG</span>
+            <span class="chip">向量检索</span><span class="chip">端侧部署</span><span class="chip">端云协同</span>
+            <span class="chip">AB 回归评测</span>
+          </div>
+          <div class="stack-group">
+            <div class="stack-label">开发方式</div>
+            <span class="chip">Cursor</span><span class="chip">Claude Code</span>
+            <span class="chip">AI 辅助开发</span><span class="chip">快速上手新框架</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="foot"><span>黄邦波 · DeepSeek Harness 研发工程师</span><span>P.3 / 3</span></div>
+</div>
+
+</body>
+</html>
